@@ -62,13 +62,13 @@ Este projeto foi concebido para ambientes baseados em **Docker Swarm**, utilizan
 📁 Estrutura do Projeto
 
 - edge-gateway/
-conf.d/            # Virtual hosts / domínios
-certs/             # Certificados SSL
-logs/              # Logs do nginx
-nginx.conf         # Configuração principal
-stack.yml          # Deploy Docker Swarm
-.gitlab-ci.yml     # Pipeline CI/CD
-README.md          # Arquivo de documentação
+- conf.d/            # Virtual hosts / domínios
+- certs/             # Certificados SSL
+- logs/              # Logs do nginx
+- nginx.conf         # Configuração principal
+- stack.yml          # Deploy Docker Swarm
+- .gitlab-ci.yml     # Pipeline CI/CD
+- README.md          # Arquivo de documentação
 
 🌐 Exemplos de Publicação
 
