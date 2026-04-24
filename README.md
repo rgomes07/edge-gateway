@@ -73,9 +73,9 @@ Este projeto foi concebido para ambientes baseados em **Docker Swarm**, utilizan
 🌐 Exemplos de Publicação
 
 - portainer.lab.gomes.local
-- git.seduc.lab.gomes.local
-- app.seduc.lab.gomes.local
-- api.seduc.lab.gomes.local
+- git.lab.gomes.local
+- app.lab.gomes.local
+- api.lab.gomes.local
 
 ⚙️ Modelo Operacional
 
