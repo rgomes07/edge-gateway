@@ -1,0 +1,17 @@
+logs/*
+certs/*
+
+!logs/.gitkeep
+!certs/.gitkeep
+
+*.log
+*.pem
+*.key
+*.crt
+*.csr
+*.bak
+*.old
+*.swp
+*~
+.env
+.env.*

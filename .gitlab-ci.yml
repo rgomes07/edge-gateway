@@ -1,0 +1,32 @@
+stages:
+  - validate
+  - deploy
+
+variables:
+  STACK_NAME: "edge-gateway"
+  STACK_FILE: "stack.yaml"
+
+validate:
+  stage: validate
+  tags:
+    - edge-gateway-runner
+
+  script:
+    - echo "Validando stack..."
+    - docker compose -f $STACK_FILE config > /dev/null
+    - echo "Validando nginx..."
+    - docker run --rm -v $CI_PROJECT_DIR/nginx.conf:/etc/nginx/nginx.conf:ro -v $CI_PROJECT_DIR/conf.d:/etc/nginx/conf.d:ro nginx:stable nginx -t
+  only:
+    - main
+
+deploy:
+  stage: deploy
+  tags:
+    - edge-gateway-runner
+  script:
+    - echo "Realizando deploy..."
+    - docker stack deploy -c $STACK_FILE $STACK_NAME -d
+  only:
+    - main
+  needs:
+    - validate
